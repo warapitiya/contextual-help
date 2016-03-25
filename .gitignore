@@ -6,3 +6,5 @@ public/
 demos/local/
 docs/
 .idea
+build/*.js
+build/reports
