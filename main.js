@@ -1,11 +1,17 @@
 /*global require, module*/
 'use strict';
 
+// bundled styling
+require('./main.scss');
+
 var ContextualHelp = require('./src/js/ContextualHelp'),
-	Drawer = require('o-drawer');
+		Drawer = require('@pearson-components/drawer/main');
 
 
 var startContextualHelp = function () {
+
+	// initialize all drawer elements on the page
+	//document.dispatchEvent(new CustomEvent('o.InitAllDrawerElements'));
 
 	// remove handler
 	document.removeEventListener('o.DOMContentLoaded', startContextualHelp);

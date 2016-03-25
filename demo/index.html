@@ -8,7 +8,6 @@
 	<script src="//polyfill.webservices.ft.com/v1/polyfill.min.js?features=default"></script>
 	<style>body { margin: 0; } .demo-js .o--if-nojs { display: none; }</style>
 	<script>(function(d) { d.className = d.className + ' demo-js'; })(document.documentElement);</script>
-	<link rel="stylesheet" href="/bundles/css?modules=o-contextual-help:/demos/src/demo.scss" />
 </head>
 <body>
 <p> Check the page source for a demonstration of using the config for adding help items </p>
@@ -66,10 +65,8 @@
 <textarea id="custom-content" cols="120" rows="15" placeholder="Paste Your Content Here"></textarea>
 <br/>
 <button onclick="testCustomContent()">Test This Content</button>
-<br/>
-WARNING: Content will not be sanitized to match final output, since the sanitizer cannot run in-browser
 
-<script src="/bundles/js?modules=o-contextual-help:/demos/src/demo.js"></script>
-<script src="//registry.origami.ft.com/embedapi?autoload=resize"></script>
+<script src="http://localhost:8080/webpack-dev-server.js"></script>
+<script src="../build/dev_demo.contextual-help.js"></script>
 </body>
 </html>

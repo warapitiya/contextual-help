@@ -1,0 +1,7 @@
+@import "scss/variables";
+@import "scss/functions";
+@import "scss/mixins";
+
+@if ($o-icons-is-silent == false) {
+	@include oIconsIncludeAll();
+}

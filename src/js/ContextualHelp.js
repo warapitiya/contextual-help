@@ -1,12 +1,12 @@
 'use strict';
 
-var XHR = require('o-xhr'),
-Collapse = require('o-collapse');
+var XHR = require('./xhr/main'),
+		Collapse = require('./collapse/main');
 
 // setup templates
-var helpTemplate = requireText('../html/helpT.html'),
-topicExcerptTemplate = requireText('../html/excerptT.html'),
-topicTemplate = requireText('../html/contentT.html');
+var helpTemplate = require('html!../html/helpT.html');
+var topicExcerptTemplate = require('html!../html/excerptT.html');
+var topicTemplate = require('html!../html/contentT.html');
 
 
 function ContextualHelp(el){
