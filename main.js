@@ -14,7 +14,7 @@ var startContextualHelp = function () {
 	//document.dispatchEvent(new CustomEvent('o.InitAllDrawerElements'));
 
 	// remove handler
-	document.removeEventListener('o.DOMContentLoaded', startContextualHelp);
+	document.removeEventListener('o.InitContextualHelp', startContextualHelp);
 
 	// add drawer div to page
 	var container = document.createElement('div');
@@ -42,7 +42,7 @@ var startContextualHelp = function () {
 
 };
 
-document.addEventListener('o.DOMContentLoaded', startContextualHelp);
+document.addEventListener('o.InitContextualHelp', startContextualHelp);
 
 ContextualHelp.init = startContextualHelp;
 
