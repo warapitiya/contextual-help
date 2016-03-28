@@ -7,7 +7,7 @@
     "build": "webpack",
     "dev": "webpack-dev-server --devtool eval --hot --progress --colors",
     "version": "npm run gen-changelog && git add CHANGELOG.md",
-    "ci": "npm run build",
+    "ci": "npm test && npm run build",
     "gen-changelog": "node ./npm_scripts/gen-changelog.js",
     "release": "node ./npm_scripts/release.js",
     "postpublish": "npm access public && echo 'Package scope set to public!'"
