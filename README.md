@@ -1,6 +1,39 @@
 # contextual-help [![Build Status](https://travis-ci.org/Pearson-Higher-Ed/contextual-help.svg?branch=master)](https://travis-ci.org/Pearson-Higher-Ed/contextual-help) [![Coverage Status](https://coveralls.io/repos/Pearson-Higher-Ed/contextual-help/badge.svg?branch=master&service=github)](https://coveralls.io/github/Pearson-Higher-Ed/contextual-help?branch=master)
 
-## Quick start
+## How to Consume in an Application
+
+Assumption: You have Node v4+ and npm 2+ installed.
+
+	> npm i --save @pearson-components/contextual-help
+
+### Script Include (Preferred)
+
+The javascript bundle is available in /node_modules/@pearson-components/contextual-help/build/dist.contextual-help.js.
+
+Add the following script include to your web page:
+
+```html
+<script src="path/to/dist.contextual-help.js"></script>
+```
+
+```js
+document.dispatchEvent(new CustomEvent('o.InitContextualHelp'));
+```
+  
+The config property options are outlined further down in this README.
+
+### CommonJS
+
+This method requires a web bundler, such as webpack or browserify.
+
+After installing the component from npm:
+
+```js
+var ContextualHelp = require('@pearson-components/contextual-help');
+ContextualHelp.init();
+```
+
+## Example Configuration
 Start by adding a list of help topics to display, via configuration script element.
 
 ```html
@@ -14,6 +47,7 @@ Start by adding a list of help topics to display, via configuration script eleme
   }
 </script>
 ```
+
 This gives contextual-help something to load.  The topics list is presented in order and the values are derived from the path of the files at https://github.com/Pearson-Higher-Ed/help-content in the /out directory without the language code.  The language code can be set dynamically in this component and it's addition to the fetch URL is managed for you.
 
 Do not include the filename extension in the list of configured topics.
