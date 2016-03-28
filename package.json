@@ -13,6 +13,7 @@
     "postpublish": "npm access public && echo 'Package scope set to public!'"
   },
   "devDependencies": {
+    "conventional-changelog": "^1.1.0",
     "coveralls": "^2.11.4",
     "css-loader": "^0.23.1",
     "expect.js": "^0.3.1",
