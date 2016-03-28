@@ -1,6 +1,6 @@
 {
   "name": "@pearson-components/contextual-help",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "dependencies": {
     "@pearson-components/drawer": {
       "version": "0.1.2",
