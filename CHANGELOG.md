@@ -1,3 +1,13 @@
+<a name="0.1.3"></a>
+## [0.1.3](https://github.com/Pearson-Higher-Ed/contextual-help/compare/v0.1.2...v0.1.3) (2016-03-29)
+
+
+### Bug Fixes
+
+* Update to drawer v0.1.3 for z-index override of 995. ([f236e8b](https://github.com/Pearson-Higher-Ed/contextual-help/commit/f236e8b))
+
+
+
 <a name="0.1.2"></a>
 ## [0.1.2](https://github.com/Pearson-Higher-Ed/contextual-help/compare/v0.1.1...v0.1.2) (2016-03-28)
 
