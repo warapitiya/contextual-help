@@ -7,3 +7,4 @@ npm_scripts
 .idea
 build/dev*.js
 node_modules
+fonts

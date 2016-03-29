@@ -3,12 +3,9 @@
 
 // Internal imports
 @import 'src/scss/fonts/main';
-@import 'src/scss/icons/main';
 @import 'src/scss/collapse/main';
 @import 'src/scss/variables';
 @import 'src/scss/mixins';
-
-@include oIconsInclude(oc-icons);
 
 .o-contextual-help__drawer {
 	background: #ffffff;
