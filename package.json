@@ -9,9 +9,16 @@
     "version": "npm run gen-changelog && git add CHANGELOG.md",
     "ci": "npm run build",
     "gen-changelog": "node ./npm_scripts/gen-changelog.js",
-    "release": "node ./npm_scripts/release.js",
-    "postpublish": "npm access public && echo 'Package scope set to public!'"
+    "release": "node ./npm_scripts/release.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Pearson-Higher-Ed/contextual-help.git"
+  },
+  "keywords": [
+    "pearson-components",
+    "contextual-help"
+  ],
   "devDependencies": {
     "conventional-changelog": "^1.1.0",
     "coveralls": "^2.11.4",
@@ -32,7 +39,7 @@
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
-    "@pearson-components/drawer": "~0.1.2",
+    "@pearson-components/drawer": "~0.1.3",
     "dom-delegate": "^2.0.3"
   }
 }
