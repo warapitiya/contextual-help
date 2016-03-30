@@ -2,7 +2,6 @@
 @import 'node_modules/@pearson-components/drawer/main';
 
 // Internal imports
-@import 'src/scss/fonts/main';
 @import 'src/scss/collapse/main';
 @import 'src/scss/variables';
 @import 'src/scss/mixins';
@@ -11,7 +10,6 @@
 	background: #ffffff;
 	color: #333333;
 	font-size: 16px;
-	font-family: oFontsGetFontFamilyWithFallbacks(HelveticaNeue);
 	z-index: $o-contextual-help-z-index;
 	a {
 		color: #0e67a9;
@@ -66,7 +64,6 @@
 		margin-left: 1em;
 		padding-left: 0.4em;
 		cursor: pointer;
-		$icon-width-height: 1em;
 		&:before,
 		&:after {
 			background: #000000;
