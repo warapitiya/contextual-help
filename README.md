@@ -2,7 +2,7 @@
 
 ## How to Consume in an Application
 
-Assumption: You have Node v4+ and npm 2+ installed.
+Platform requirements: npm 2+ and the [Elements SDK](https://www.npmjs.com/package/pearson-elements)
 
 	> npm i --save @pearson-components/contextual-help
 
@@ -24,7 +24,7 @@ The config property options are outlined further down in this README.
 
 ### CommonJS
 
-This method requires a web bundler, such as webpack or browserify.
+This method requires a web dependency bundler, such as webpack or browserify.
 
 After installing the component from npm:
 
