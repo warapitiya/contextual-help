@@ -1,4 +1,6 @@
 /*global require*/
+require('../../node_modules/pearson-elements/scss/elements.scss');
+
 require('../../main');
 
 document.addEventListener("DOMContentLoaded", function() {
