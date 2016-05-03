@@ -115,6 +115,7 @@ document.getElementById('o-contextual-help-drawer').addEventListener('oDrawer.op
 ## Accessibility
 
 The module will automatically update `aria-expanded` depending on the state of the target element.
+Do to: https://docs.google.com/document/d/15B4TRmw2pMXl0NcLKWWE9OuiyA9AqnUN_3rJiStijwc/edit
 
 ## License
 
