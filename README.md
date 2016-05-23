@@ -6,6 +6,15 @@ Platform requirements: npm 2+ and the [Elements SDK](https://www.npmjs.com/packa
 
 	> npm i --save @pearson-components/contextual-help
 
+### Integration with @pearson-components/app-header
+
+Most commonly, contextual-help is used with the app-header component, which emits the `oAppHeader.help.toggle` event when
+ the Help link is clicked. Contextual-help, when initialized, will automatically check for app-header in the DOM, and 
+ then add the app-header event listener.
+
+To successfully integrate with app-header, **initialize the app-header first**, and then initialize contextual-help next
+as described below.
+
 ### Script Include (Preferred)
 
 The javascript bundle is available in /node_modules/@pearson-components/contextual-help/build/dist.contextual-help.js.
@@ -15,6 +24,8 @@ Add the following script include to your web page:
 ```html
 <script src="path/to/dist.contextual-help.js"></script>
 ```
+
+Initialize contextual-help in your javascript (after app-header initialization):
 
 ```js
 document.dispatchEvent(new CustomEvent('o.InitContextualHelp'));
