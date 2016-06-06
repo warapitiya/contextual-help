@@ -41,7 +41,7 @@
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
-    "@pearson-components/drawer": "~0.1.4",
+    "@pearson-components/drawer": "~0.2.0",
     "dom-delegate": "~2.0.3"
   }
 }
