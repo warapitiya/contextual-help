@@ -1,3 +1,13 @@
+<a name="1.1.0"></a>
+# [1.1.0](https://github.com/Pearson-Higher-Ed/contextual-help/compare/v1.0.0...v1.1.0) (2016-06-07)
+
+
+### Features
+
+* **drawer:** Close open drawers first before opening the new one. ([d997200](https://github.com/Pearson-Higher-Ed/contextual-help/commit/d997200))
+
+
+
 <a name="1.0.0"></a>
 # [1.0.0](https://github.com/Pearson-Higher-Ed/contextual-help/compare/v0.1.3...v1.0.0) (2016-05-03)
 
@@ -6,9 +16,10 @@
 
 * Update polyfill request for unit testing with PhantomJS. ([d77de4c](https://github.com/Pearson-Higher-Ed/contextual-help/commit/d77de4c))
 
+
 ### Features
 
-* Remove fonts dependency on file proxy build service and use Elements SDK instead ([a7f2512](https://github.com/Pearson-Higher-Ed/contextual-help/commit/a7f2512))
+* Remove fonts dependency on file proxy build service and use Elements SDK instead. ([a7f2512](https://github.com/Pearson-Higher-Ed/contextual-help/commit/a7f2512))
 * Use Elements SDK icons and remove rolled-up o-icons. ([d6f6eb0](https://github.com/Pearson-Higher-Ed/contextual-help/commit/d6f6eb0))
 
 
@@ -28,10 +39,8 @@
 
 
 
-
 <a name="0.1.1"></a>
 ## [0.1.1](https://github.com/Pearson-Higher-Ed/contextual-help/compare/v0.1.0...v0.1.1) (2016-03-28)
-
 
 
 
@@ -46,6 +55,7 @@
 * prepend instead of append, and adjusted blue ([c5709d1](https://github.com/Pearson-Higher-Ed/contextual-help/commit/c5709d1))
 * Sass variables ([de5dd33](https://github.com/Pearson-Higher-Ed/contextual-help/commit/de5dd33))
 * **build:** Remove optional, low-level Mac-specific fsevents library from shrinkwrap. ([1011330](https://github.com/Pearson-Higher-Ed/contextual-help/commit/1011330))
+
 
 ### Features
 
