@@ -14,6 +14,9 @@
 	a {
 		color: #0e67a9;
 		text-decoration: none;
+		&.close-help{
+			color:#333333;
+		}
 	}
 
 	@media only screen and (max-width: 415px) {
@@ -115,6 +118,10 @@
 	}
 }
 
+a#contextual-help-close-content{
+	color:black;
+}
+
 .o-contextual-help__excerpt p {
 	height: 3em;
 	overflow: hidden;
@@ -125,10 +132,8 @@
 
 .close-help {
   	float: right;
-  	margin-top: 2px;
 }
 
 .back-to-help-icon {
   	float: left;
-  	margin-top: 2px;
 }
