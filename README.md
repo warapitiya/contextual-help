@@ -123,6 +123,11 @@ document.getElementById('o-contextual-help-drawer').addEventListener('oDrawer.op
 });
 ```
 
+### How do I debug?
+
+Source maps are enabled for the webpack dev server. Using **Chrome dev tools** - open the "Sources" tab, navigate to 
+`top/webpack://./`, and you will find the original source files for which you can set breakpoints in Chrome's debugger.
+
 ## Accessibility
 
 The module will automatically update `aria-expanded` depending on the state of the target element.

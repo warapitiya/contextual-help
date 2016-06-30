@@ -6,7 +6,7 @@
     "test": "./node_modules/karma/bin/karma start karma.conf.js",
     "build": "webpack -p",
     "dev-setup": "mkdir -p fonts && cp ./node_modules/pearson-elements/dist/fonts/* ./fonts",
-    "dev": "npm run dev-setup && webpack-dev-server --devtool eval --hot --progress --colors",
+    "dev": "npm run dev-setup && webpack-dev-server --devtool source-map --hot --progress --colors",
     "version": "npm run gen-changelog && git add CHANGELOG.md",
     "ci": "npm run build",
     "gen-changelog": "node ./npm_scripts/gen-changelog.js",
