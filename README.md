@@ -131,7 +131,11 @@ Source maps are enabled for the webpack dev server. Using **Chrome dev tools** -
 ## Accessibility
 
 The module will automatically update `aria-expanded` depending on the state of the target element.
-Do to: https://docs.google.com/document/d/15B4TRmw2pMXl0NcLKWWE9OuiyA9AqnUN_3rJiStijwc/edit
+To do: https://docs.google.com/document/d/15B4TRmw2pMXl0NcLKWWE9OuiyA9AqnUN_3rJiStijwc/edit
+
+## Contributions
+
+Please review the [guidelines](https://github.com/Pearson-Higher-Ed/docs/blob/master/origami-contributions.md) for contributing before getting started.
 
 ## License
 
