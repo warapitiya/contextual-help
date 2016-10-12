@@ -8,16 +8,13 @@ Platform requirements: npm 2+ and the [Elements SDK](https://www.npmjs.com/packa
 
 ### Integration with @pearson-components/app-header
 
-Most commonly, contextual-help is used with the app-header component, which emits the `oAppHeader.help.toggle` event when
- the Help link is clicked. Contextual-help, when initialized, will automatically check for app-header in the DOM, and 
- then add the app-header event listener.
+Most commonly, contextual-help is used with the app-header component, which emits the `oAppHeader.help.toggle` event when the Help link is clicked. Contextual-help, when initialized, will automatically check for app-header in the DOM, and then add the app-header event listener.
 
-To successfully integrate with app-header, **initialize the app-header first**, and then initialize contextual-help next
-as described below.
+To successfully integrate with app-header, **initialize the app-header first**, and then initialize contextual-help next as described below.
 
 ### Script Include (Preferred)
 
-The javascript bundle is available in /node_modules/@pearson-components/contextual-help/build/dist.contextual-help.js.
+The JavaScript bundle is available in /node_modules/@pearson-components/contextual-help/build/dist.contextual-help.js.
 
 Add the following script include to your web page:
 
@@ -25,7 +22,7 @@ Add the following script include to your web page:
 <script src="path/to/dist.contextual-help.js"></script>
 ```
 
-Initialize contextual-help in your javascript (after app-header initialization):
+Initialize contextual-help in your JavaScript (after app-header initialization):
 
 ```js
 document.dispatchEvent(new CustomEvent('o.InitContextualHelp'));
@@ -125,13 +122,48 @@ document.getElementById('o-contextual-help-drawer').addEventListener('oDrawer.op
 
 ### How do I debug?
 
-Source maps are enabled for the webpack dev server. Using **Chrome dev tools** - open the "Sources" tab, navigate to 
-`top/webpack://./`, and you will find the original source files for which you can set breakpoints in Chrome's debugger.
+Source maps are enabled for the webpack dev server. Using **Chrome dev tools** - open the "Sources" tab, navigate to `top/webpack://./`, and you will find the original source files for which you can set breakpoints in Chrome's debugger.
 
 ## Accessibility
 
-The module will automatically update `aria-expanded` depending on the state of the target element.
-To do: https://docs.google.com/document/d/15B4TRmw2pMXl0NcLKWWE9OuiyA9AqnUN_3rJiStijwc/edit
+### Keyboard focus
+
+Refer to the [drawer](https://github.com/Pearson-Higher-Ed/drawer) documentation for accessibility on the drawer element. The drawer takes care of managing focus as the drawer is opened and closed, assuming all the links or buttons which trigger the drawer have a `data-open`, `data-close`, or `data-toggle` attribute and that is set to the string "drawer".
+
+In contextual-help, there are at least 2 layers inside: one listing the help topics, and one with dedicated topic information. Only focusable elements within the visible layer should be reachable with keyboard focus and by assistive tech (AT) such as screen readers. When another layer slides into view, the now-invisible layer should no longer be available to keyboard or AT, and keyboard focus will move to the new layer. 
+
+When the default contextual-help (topics list) is opened, focus will be on the "Close Help" button. When a specific topic is opened, focus will be on the "Back to Help Topics" button. Focus will cycle through only the visible layer. If the specific-topic layer was triggered by clicking on a help topic from within contextual help, then clicking "Back to Help Topics" will bring keyboard focus back to that topic. Otherwise, focus moves to the "Close Help" button.
+
+### Heading order
+
+In the main topics list section, the phrase "Help Topics" is an h2 element. The name of each topic in the topics list is an h3 element. 
+
+In the specific-topic section, the name of the topic is an h2 element. Any headings inside the topic should be an h3 or smaller, starting with h3 for the main subtopics. They should not jump to h4, h5, or h6, but follow good content heading structure.
+
+### Accordions/disclosure widgets
+
+In order to include an accordion or disclosure widget inside content, the following must be included for it to work correctly:
+The div surrounding all the content which has the accordions must have a class of `o-contextual-help__accordion`. This tells JavaScript to run the accordion function.
+
+The clickable elements which reveal/hide the content must be buttons, however these buttons likely make sense to be inside headings if the clickable text is heading text. Example:
+
+```
+<h3>
+  <button class="o-disclosure" aria-controls="...an id here..." aria-expanded="false">
+    <i class="pe-icon--caret-right" aria-hidden="true"></i>
+     Heading Text Here
+  </button>
+</h3>
+
+...
+
+<div id="...an id here..." class="o-panel--closed">Hidden content here...</div>
+```
+
+The id of the div must be unique on the page and match the `aria-controls` attribute of its button and must have a class of either "o-panel--closed" (if it is default hidden) or "o-panel--opened" if it is by default open (if this is the case, the associated button above must have its `aria-expanded` attribute set to "true").
+
+When the button is clicked and the matching div becomes visible, focus remains on the button, the button's `aria-expanded` attribute turns to "true" and the class name of the hidden content becomes `o-panel--opened`.
+
 
 ## Contributions
 
