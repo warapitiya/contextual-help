@@ -185,7 +185,6 @@ function ContextualHelp(el){
 
 	ContextualHelp.prototype.setLanguage = function(langCode){
 		this.lang = langCode;
-		this._el.classList.add('o-contextual-help__detail--visible');
 	};
 
 	ContextualHelp.prototype.openHelpTopic = function(topic){

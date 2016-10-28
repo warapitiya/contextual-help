@@ -98,6 +98,18 @@ window.signinTest = function(){
 	help.addTopics(newTopics);
 }
 
+window.setLanguageThenOpen = function(){
+	var help = document.getElementById('o-contextual-help-drawer').oContextualHelp;
+	help.removeAllTopics();
+	help.setLanguage('fr');
+	var newTopics = [
+		'pi/forgot_creds_next',
+		'contactsupport'
+	];
+	help.addTopics(newTopics);
+	help.open();
+}
+
 window.testCustomContent = function(){
 	var customContent = document.getElementById('custom-content').value,
 		secretDOM = document.getElementById('secret-dom');
