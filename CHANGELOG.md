@@ -1,3 +1,21 @@
+<a name="1.2.1"></a>
+## [1.2.1](https://github.com/Pearson-Higher-Ed/contextual-help/compare/v1.1.1...v1.2.1) (2016-10-28)
+
+
+### Bug Fixes
+
+* change close icon to black, header to black, and apply pe-label--large to header ([a4cfd9d](https://github.com/Pearson-Higher-Ed/contextual-help/commit/a4cfd9d))
+* color:black to color [#33333](https://github.com/Pearson-Higher-Ed/contextual-help/issues/33333) to match previous entries ([cf46d8b](https://github.com/Pearson-Higher-Ed/contextual-help/commit/cf46d8b))
+* setLanguage() should not set 'detail--visible' class ([b0a9112](https://github.com/Pearson-Higher-Ed/contextual-help/commit/b0a9112))
+
+
+### Features
+
+* **contextual-help:** run tests against feature branch in ci ([f1b1197](https://github.com/Pearson-Higher-Ed/contextual-help/commit/f1b1197))
+* **contextual-help:** run tests against feature branch in ci ([4c51414](https://github.com/Pearson-Higher-Ed/contextual-help/commit/4c51414))
+
+
+
 <a name="1.1.1"></a>
 ## [1.1.1](https://github.com/Pearson-Higher-Ed/contextual-help/compare/v1.0.0...v1.1.1) (2016-06-07)
 
