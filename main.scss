@@ -1,8 +1,9 @@
 @import 'node_modules/@pearson-components/drawer/main';
 
-.o-contextual-help__drawer {
-  color: #333333;
+.o-contextual-help__drawer.o-drawer {
+  color: #252525;
   font-size: 16px;
+  background-color: #f5f5f5;                                                    
 }
 
 .o-contextual-help__content--visible {
@@ -15,9 +16,55 @@
 }
 
 .o-contextual-help__header {
-  padding: 19px;
-  border-bottom: 1px solid #e8e8e8;
+  padding: 20px 24px 20px 32px;
+  background-color: #e9e9e9;
+  border-bottom: 1px solid #c7c7c7;
   overflow: hidden;
+}
+
+.topic_heading {
+  margin: 0;
+  font: 16px 'Open Sans', calibri, tahoma, sans-serif;
+  text-align: center;
+}
+
+svg[class^='pe-icon'] {
+  display: inline-block;
+  vertical-align: top;
+  fill: currentColor;
+}
+svg[class$='-18'] {
+  width: 14px;
+  height: 14px;
+}
+
+.close-help, .o-disclosure, .back-to-help {
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+
+  & svg {
+    margin-top: 2px;
+  }
+}
+
+.close-help {
+  float: right;
+  width: 16px;
+  height: 16px;
+}
+
+.back-to-help {
+  display: block;
+  width: 90%;
+
+  svg {
+    float: left;
+  }
+  span {
+    display: block;
+    text-align: center;
+  }
 }
 
 .o-contextual-help__topics,
@@ -34,6 +81,7 @@
   transition: left 0.4s ease;
   user-select: none;
 
+  /* accordion */
   .o-panel--closed {
     display: none;
   }
@@ -43,13 +91,11 @@
 }
 
 .o-contextual-help__topic {
-  padding: 10px 19px;
+  padding: 0 32px;/* adjust when we get redlines */
   border-bottom: 1px solid #e8e8e8;
 
   h1, h2, h3, h4 {
-    font-size: 18px;
-    line-height: 1.45em;
-    font-weight: normal;
+    font: normal 16px/1.45 'Open Sans', calibri, tahoma, sans-serif;
     margin-bottom: 6px;
     margin-top: 6px;
   }
@@ -57,6 +103,10 @@
     font-size: 0.9em;
     line-height: 1.6em;
   }
+}
+
+.o-contextual-help__excerpt-list {
+  padding: 32px 0;
 }
 
 .o-contextual-help__topic-content {
@@ -67,37 +117,11 @@
   }
 }
 
-#contextual-help-close-content{
-    color:#333333;
-}
-
 .o-contextual-help__excerpt p {
   height: 3em;
   overflow: hidden;
 
   &:after {
     content: '\02026';
-  }
-}
-
-.close-help, .o-disclosure, .back-to-help {
-  padding: 0;
-  background-color: transparent;
-  border: 0;
-
-  &:focus {
-    outline: 1px dotted #333333;
-  }
-}
-
-.close-help {
-  float: right;
-}
-
-.back-to-help {
-  float: left;
-
-  span {
-    margin-right: .3em;
   }
 }

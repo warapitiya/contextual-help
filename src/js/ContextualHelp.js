@@ -251,15 +251,18 @@ ContextualHelp.prototype.accordion = function() {
     var button = buttons[i];
     button.onclick = function(e) {
       var panel = document.getElementById(this.getAttribute('aria-controls')),
-          icon = this.getElementsByTagName('I')[0];
+          svg = this.getElementsByTagNameNS('http://www.w3.org/2000/svg','svg')[0],
+          use = svg.getElementsByTagName('use')[0];
       if (this.getAttribute('aria-expanded')=="true") {
         panel.className = 'o-panel--closed';
-        icon.className = 'pe-icon--caret-right';
+        svg.setAttribute('class','pe-icon--pivot-close-18');
+        use.href.baseVal = "/icons/p-icons-sprite-1.1.svg#pivot-close-18";
         this.setAttribute('aria-expanded', false);
       }
       else {
         panel.className = 'o-panel--open';
-        icon.className = 'pe-icon--caret-down';
+        svg.setAttribute('class','pe-icon--pivot-open-18');
+        use.href.baseVal = '/icons/p-icons-sprite-1.1.svg#pivot-open-18';
         this.setAttribute('aria-expanded', true);
       }
     };

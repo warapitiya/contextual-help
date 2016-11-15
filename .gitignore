@@ -5,4 +5,5 @@ node_modules/
 build/*.js
 build/reports
 fonts
+icons
 contextual-help.iml

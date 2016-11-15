@@ -145,13 +145,17 @@ In the specific-topic section, the name of the topic is an h2 element. Any headi
 In order to include an accordion or disclosure widget inside content, the following must be included for it to work correctly:
 The div surrounding all the content which has the accordions must have a class of `o-contextual-help__accordion`. This tells JavaScript to run the accordion function.
 
+The path of the icon might be different for you locally. If the icon doesn't appear, check the path.
+
 The clickable elements which reveal/hide the content must be buttons, however these buttons likely make sense to be inside headings if the clickable text is heading text. Example:
 
 ```
 <h3>
   <button class="o-disclosure" aria-controls="...an id here..." aria-expanded="false">
-    <i class="pe-icon--caret-right" aria-hidden="true"></i>
-     Heading Text Here
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" class="pe-icon--pivot-close-18">
+      <use xlink:href="/icons/p-icons-sprite-1.1.svg#pivot-close-18"></use>
+    </svg>
+    Heading Text Here
   </button>
 </h3>
 

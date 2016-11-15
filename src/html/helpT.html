@@ -1,10 +1,17 @@
 <div class="o-contextual-help__topics">
   <div class="o-contextual-help__header">
     <button type="button" data-target="#o-contextual-help-drawer" data-close="o-drawer" class="close-help">
-      <i class="pe-icon--close" aria-hidden="true"></i>
-      <span class="pe-sr-only">Close Help</span>
+      <svg version="1.1"
+           xmlns="http://www.w3.org/2000/svg" 
+           xmlns:xlink="http://www.w3.org/1999/xlink"
+           role="img"
+           aria-labelledby="close_main"
+           class="pe-icon--remove-lg-18">
+        <title id="close_main">Close Help</title>
+        <use xlink:href="/icons/p-icons-sprite-1.1.svg#remove-lg-18"></use>
+      </svg>
     </button>
-    <h2 class="pe-label pe-label--large">Help Topics</h2>
+    <h2 class="topic_heading">Help Topics</h2>
   </div>
   <div class="o-contextual-help__excerpt-list" aria-live="polite"></div>
 </div>
@@ -12,12 +19,25 @@
 <div class="o-contextual-help__topic-content">
   <div class="o-contextual-help__header">
     <button type="button" data-target="#o-contextual-help-drawer" data-close="o-drawer" class="close-help">
-      <i class="pe-icon--close" aria-hidden="true"></i>
-      <span class="pe-sr-only">Close Help</span>
+      <svg version="1.1"
+           xmlns="http://www.w3.org/2000/svg" 
+           xmlns:xlink="http://www.w3.org/1999/xlink"
+           role="img"
+           aria-labelledby="close_sub"
+           class="pe-icon--remove-lg-18">
+        <title id="close_sub">Close Help</title>
+        <use xlink:href="/icons/p-icons-sprite-1.1.svg#remove-lg-18"></use>
+      </svg>
     </button>
-    <button type="button" class="pe-label pe-label--large back-to-help" id="contextual-help-close-content">
-      <span aria-hidden="true"><i class="pe-icon--chevron-left"></i></span>
-      Back to Help Topics
+    <button type="button" class="back-to-help" id="contextual-help-close-content">
+      <svg version="1.1"
+           xmlns="http://www.w3.org/2000/svg" 
+           xmlns:xlink="http://www.w3.org/1999/xlink"
+           aria-hidden="true"
+           class="pe-icon--chevron-back-18">
+        <use xlink:href="/icons/p-icons-sprite-1.1.svg#chevron-back-18"></use>
+      </svg>
+      <span>Back to Help Topics</span>
     </button>
   </div>
   <div id="o-contextual-help-topic-content-target" class="o-contextual-help__topic" aria-live="polite"></div>
