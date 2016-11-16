@@ -86,16 +86,16 @@ window.testAccordion = function(){
 }
 
 window.signinTest = function(){
-	var help = document.getElementById('o-contextual-help-drawer').oContextualHelp;
-	help.removeAllTopics();
-	var newTopics = [
-		'console/instructor/validationtime',
-		'console/instructor/validatedinstructor',
-		'console/instructor/courseregsettings',
-		'console/instructor/educatorresources',
-		'console/instructor/contactsupport'
-	];
-	help.addTopics(newTopics);
+  var help = document.getElementById('o-contextual-help-drawer').oContextualHelp;
+  help.removeAllTopics();
+  var newTopics = [
+      'console/instructor/validationtime',
+      'console/instructor/validatedinstructor',
+      'console/instructor/courseregsettings',
+      'console/instructor/educatorresources',
+      'console/instructor/contactsupport'
+  ];
+  help.addTopics(newTopics);
 }
 
 window.setLanguageThenOpen = function(){
@@ -110,68 +110,39 @@ window.setLanguageThenOpen = function(){
   help.open();
 }
 
-window.directLoader = function() {
-  var help = document.getElementById('o-contextual-help-drawer').oContextualHelp;
-  var testCache = {
-    title: 'test content',
-    excerpt: 'lorem ipsum',
-    content: '<p>Lorem Ipsum dolar sit amet.</p>'
-  };
-  help.cache = {
-    test: testCache
-  };
-  help.openHelpTopic('test');
-}
-
-window.addRemoveTopics = function() {
-  var fakeHelp = {
-    title: 'Fake Content',
-    excerpt: 'This is the fake content for the test.',
-    content: '<p>This is fake.</p>'
-  };
-
-  var help = document.getElementById('o-contextual-help-drawer').oContextualHelp;
-  help.cache = {
-    fake: fakeHelp
-  };
-  help.addTopics('fake');
-  help.openHelpTopic('fake');
-}
-
-
 window.testCustomContent = function(){
-	var customContent = document.getElementById('custom-content').value,
-		secretDOM = document.getElementById('secret-dom');
-	window.console && console.log('customContent', customContent);
-	secretDOM.innerHTML = customContent;
-	var data = {
-		title: false,
-		excerpt: '',
-		content: false
-	};
-	var titleEl = secretDOM.getElementsByTagName('h1');
-	if(titleEl && titleEl.length > 0){
-		titleEl = titleEl[0];
-		data.title = titleEl.innerHTML;
-		titleEl.parentNode.removeChild(titleEl);
-		data.content = secretDOM.innerHTML;
-	}
-	var contentWords = [];
-	var contentParagraphs = secretDOM.querySelectorAll('p');
-	for(var i=0, l=contentParagraphs.length; i<l; i++){
-		var para = contentParagraphs[i];
-		var words = para.innerHTML.split(' ');
-		contentWords.push(words);
-	}
-	contentWords.forEach(function(w){
-    // 80 character excerpt limit
+  var customContent = document.getElementById('custom-content').value,
+      secretDOM = document.getElementById('secret-dom');
+  window.console && console.log('customContent', customContent);
+  secretDOM.innerHTML = customContent;
+  var data = {
+    title: false,
+    excerpt: '',
+    content: false
+  };
+  var titleEl = secretDOM.getElementsByTagName('h1');
+  if(titleEl && titleEl.length > 0){
+    titleEl = titleEl[0];
+    data.title = titleEl.innerHTML;
+    titleEl.parentNode.removeChild(titleEl);
+    data.content = secretDOM.innerHTML;
+  }
+  var contentWords = [];
+  var contentParagraphs = secretDOM.querySelectorAll('p');
+  for(var i=0, l=contentParagraphs.length; i<l; i++){
+    var para = contentParagraphs[i];
+    var words = para.innerHTML.split(' ');
+    contentWords.push(words);
+  }
+  contentWords.forEach(function(w){
+  // 80 character excerpt limit
     if(data.excerpt.length + w.length + 1 < 80){
       data.excerpt += w + ' ';
     }
   });
 
-	var now = new Date().getTime();
-	var help = document.getElementById('o-contextual-help-drawer').oContextualHelp;
-	help.cache['help-'+now] = data;
-	help.openHelpTopic('help-'+now);
+  var now = new Date().getTime();
+  var help = document.getElementById('o-contextual-help-drawer').oContextualHelp;
+  help.cache['help-'+now] = data;
+  help.openHelpTopic('help-'+now);
 }
