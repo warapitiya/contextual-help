@@ -1,3 +1,13 @@
+<a name="1.3.0"></a>
+# [1.3.0](https://github.com/Pearson-Higher-Ed/contextual-help/compare/v1.2.1...v1.3.0) (2016-11-16)
+
+
+### Bug Fixes
+
+* get rid of collapse; adjust HTML semantics; update package.json new drawer/elements; tabs to spaces per coding standards ([7f09f49](https://github.com/Pearson-Higher-Ed/contextual-help/commit/7f09f49))
+
+
+
 <a name="1.2.1"></a>
 ## [1.2.1](https://github.com/Pearson-Higher-Ed/contextual-help/compare/v1.1.1...v1.2.1) (2016-10-28)
 
