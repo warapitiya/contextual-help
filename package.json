@@ -1,6 +1,6 @@
 {
   "name": "@pearson-components/contextual-help",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "Contextual help for web applications.",
   "scripts": {
     "test": "./node_modules/karma/bin/karma start karma.conf.js",
@@ -33,7 +33,7 @@
     "karma-webpack": "^1.7.0",
     "mocha": "^2.1.0",
     "node-sass": "^3.4.2",
-    "pearson-elements": "^0.2.0",
+    "pearson-elements": "^0.14.0",
     "phantomjs-prebuilt": "^2.1.7",
     "sass-loader": "^3.2.0",
     "style-loader": "^0.13.0",
@@ -41,7 +41,7 @@
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
-    "@pearson-components/drawer": "~0.2.0",
+    "@pearson-components/drawer": "~0.3.0",
     "dom-delegate": "~2.0.3"
   }
 }

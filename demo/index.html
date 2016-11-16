@@ -5,9 +5,9 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 	<title>o-contextual-help demo</title>
 	<meta name="viewport" content="initial-scale=1.0, width=device-width" />
-	<script src="//polyfill.webservices.ft.com/v1/polyfill.min.js?features=default"></script>
 </head>
 <body>
+<h1>Contextual Help demo</h1>
 <p> Check the page source for a demonstration of using the config for adding help items: </p>
 
 <script type="application/json" data-o-contextual-help-config>
@@ -22,7 +22,7 @@
 
 <header class="o-app-header"></header>
 
-<a href="#o-contextual-help-drawer" data-toggle="o-drawer">Toggle Help Drawer (direct)</a>
+<button type="button" data-target="#o-contextual-help-drawer" data-toggle="o-drawer">Toggle Help Drawer (direct)</button>
 <br/>
 <a href="#" onclick="issueHelpClickFromHeader()">Trigger Help via Header Menu Item Click (simulated here)</a>
 <br/>
@@ -58,12 +58,28 @@
 <a href="#" onclick="signinTest()">Test Signin Content Swap</a>
 
 <br/><br/>
-<h4>Test Your Content</h4>
+
+<a href="#" onclick="setLanguageThenOpen()">Remove all topics, setLanguage('fr'), add topics, open drawer</a>
+<br><br>
+
+<h2>Test direct loading of a topic purely with JS</h2>
+<button type="button" onclick="directLoader()">Directly load fake topic</button>
+<br></br>
+
+<h2>Test adding and removing topics purely with JS</h2>
+<button type="button" onclick="addRemoveTopics()">Add a fake topic</button><br>
+
+<br/><br/>
+<h2>Test Your Content</h2>
 <div id="secret-dom" style="display: none;"></div>
-<textarea id="custom-content" cols="120" rows="15" placeholder="Paste Your Content Here"></textarea>
-<br/>
+<div class="pe-textarea">
+  <label for="custom-content">Paste your content: </label>
+  <textarea id="custom-content" cols="120" rows="15" placeholder="Paste Your Content Here"></textarea>
+</div>
 <button onclick="testCustomContent()">Test This Content</button>
 
+<!-- CustomEvent polyfill is for IE, Intl.js polyfill is for Safari -->
+<script src="https://cdn.polyfill.io/v2/polyfill.js?features=CustomEvent,Intl.~locale.en,Intl.~locale.fr"></script>
 <script src="http://localhost:8080/webpack-dev-server.js"></script>
 <script src="../build/dev_demo.contextual-help.js"></script>
 </body>
