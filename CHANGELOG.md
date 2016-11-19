@@ -1,3 +1,13 @@
+<a name="2.0.0"></a>
+# [2.0.0](https://github.com/Pearson-Higher-Ed/contextual-help/compare/v1.3.1...v2.0.0) (2016-11-19)
+
+
+### Features
+
+* v2 styles ([c112016](https://github.com/Pearson-Higher-Ed/contextual-help/commit/c112016))
+
+
+
 <a name="1.3.1"></a>
 ## [1.3.1](https://github.com/Pearson-Higher-Ed/contextual-help/compare/v1.3.0...v1.3.1) (2016-11-16)
 
