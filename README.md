@@ -1,5 +1,9 @@
 # contextual-help [![Build Status](https://travis-ci.org/Pearson-Higher-Ed/contextual-help.svg?branch=master)](https://travis-ci.org/Pearson-Higher-Ed/contextual-help) [![Coverage Status](https://coveralls.io/repos/Pearson-Higher-Ed/contextual-help/badge.svg?branch=master&service=github)](https://coveralls.io/github/Pearson-Higher-Ed/contextual-help?branch=master)
 
+## Notice
+
+This current version of Contextual-Help is using the new ElementsSDK version, which is a breaking change due to Pearson rebranding. [Latest con-help rebranding styles](http://pearson-higher-ed.github.io/design/c/drawer/beta/)
+
 ## How to Consume in an Application
 
 Platform requirements: npm 2+ and the [Elements SDK](https://www.npmjs.com/package/pearson-elements)

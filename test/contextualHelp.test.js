@@ -59,7 +59,7 @@ describe('ContextualHelp config loader (with config)', function() {
   });
 });
 
-describe('ContextualHelp add/remove topics', function() {
+describe('ContextualHelp remove topics', function() {
   var fakeHelp = {
     title: 'Fake Content',
     excerpt: 'This is the fake content for the test.',
@@ -71,7 +71,7 @@ describe('ContextualHelp add/remove topics', function() {
     content: '<p>This is also fake.</p>'
   };
 
-  it('removeAllTopics() should empty the topics list', function(){
+  it('removeAllTopics() should empty the topics list', function() {
     var ch = new ContextualHelp(document.body);
     ch.cache = {
       fake: fakeHelp,
@@ -84,7 +84,7 @@ describe('ContextualHelp add/remove topics', function() {
     expect(ch.topics).to.have.length(0);
   });
 
-  it('removeTopics() should remove topic from list by name', function(){
+  it('removeTopics() should remove topic from list by name', function() {
     var ch = new ContextualHelp(document.body);
     ch.cache = {
       fake: fakeHelp,
@@ -99,11 +99,25 @@ describe('ContextualHelp add/remove topics', function() {
   });
 });
 
-describe('setLanguage()', function(){
-  it('should change the language code', function(){
+describe('setLanguage()', function() {
+  it('should change the language code', function() {
     var ch = new ContextualHelp(document.body);
     expect(ch.lang).to.be('en-us');
     ch.setLanguage('ru');
     expect(ch.lang).to.be('ru');
+  });
+});
+
+describe('checks for app-header\'s existence', function() {
+  it('should add a class if app-header exists', function() {
+    var header = document.createElement('header');
+    header.classList.add('o-app-header');
+    document.body.appendChild(header);
+    var ct = document.createElement('div');
+    document.body.appendChild(ct);
+
+    var ch = new ContextualHelp(ct),
+        el = ch._el;
+    expect(el.className).to.be('exists-o-header');
   });
 });

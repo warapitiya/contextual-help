@@ -161,12 +161,14 @@ function ContextualHelp(el) {
     return;
   };
 
-  // bind header event for show / hide
   var eventEl = document.querySelector('header.o-app-header');
   if (eventEl) {
+    // bind header event for show / hide
     eventEl.addEventListener('oAppHeader.help.toggle', function() {
       if (me.toggle) { me.toggle(); }
     });
+    // if header, add a class
+    el.classList.add('exists-o-header');
   }
 
   this.scheduleInit();
