@@ -6,7 +6,8 @@
     "test": "./node_modules/karma/bin/karma start karma.conf.js",
     "build": "webpack -p",
     "dev-setup": "mkdir -p fonts && mkdir -p icons && cp ./node_modules/pearson-elements/dist/fonts/* ./fonts && cp ./node_modules/pearson-elements/dist/icons/* ./icons",
-    "dev": "npm run dev-setup && webpack-dev-server --devtool source-map --hot --progress --colors",
+    "dev": "npm run dev-setup && webpack-dev-server --devtool source-map --hot --host 0.0.0.0 --progress --colors",
+    "start": "npm run dev",
     "version": "npm run gen-changelog && git add CHANGELOG.md",
     "ci": "npm run build",
     "gen-changelog": "node ./npm_scripts/gen-changelog.js",
@@ -42,7 +43,7 @@
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
-    "@pearson-components/drawer": "~0.3.1",
+    "@pearson-components/drawer": "~0.3.3",
     "dom-delegate": "~2.0.3"
   }
 }
