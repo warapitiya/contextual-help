@@ -258,13 +258,13 @@ ContextualHelp.prototype.accordion = function() {
       if (this.getAttribute('aria-expanded')=="true") {
         panel.className = 'o-panel--closed';
         svg.setAttribute('class','pe-icon--pivot-close-18');
-        use.href.baseVal = "/icons/p-icons-sprite-1.1.svg#pivot-close-18";
+        use.href.baseVal = "#pivot-close-18";
         this.setAttribute('aria-expanded', false);
       }
       else {
         panel.className = 'o-panel--open';
         svg.setAttribute('class','pe-icon--pivot-open-18');
-        use.href.baseVal = '/icons/p-icons-sprite-1.1.svg#pivot-open-18';
+        use.href.baseVal = '#pivot-open-18';
         this.setAttribute('aria-expanded', true);
       }
     };
