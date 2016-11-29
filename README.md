@@ -115,7 +115,11 @@ Returns the internal help topic array.
 
 ### Events
 
-Refer to the [drawer](https://github.com/Pearson-Higher-Ed/drawer) documentation for the supported events.
+Refer to the [drawer](https://github.com/Pearson-Higher-Ed/drawer) documentation for the supported events.  Be aware that IE 11 does not support `CustomEvent`. If you want to use `CustomEvent` (as seen in `demo.js`), you will need to add the CustomEvent polyfill script to your HTML page:
+
+```html
+<script src="https://cdn.polyfill.io/v2/polyfill.js?features=CustomEvent"></script>
+```
 
 
 ```js
