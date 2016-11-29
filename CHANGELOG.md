@@ -1,3 +1,18 @@
+<a name="2.1.0"></a>
+# [2.1.0](https://github.com/Pearson-Higher-Ed/contextual-help/compare/v2.0.0...v2.1.0) (2016-11-29)
+
+
+### Bug Fixes
+
+* use script to add icons to page for IE 11 and older Android webkits ([5c4424f](https://github.com/Pearson-Higher-Ed/contextual-help/commit/5c4424f))
+
+
+### Features
+
+* con-help checks for app-header and adjusts padding appropriately; README updated ([30a6df3](https://github.com/Pearson-Higher-Ed/contextual-help/commit/30a6df3))
+
+
+
 <a name="2.0.0"></a>
 # [2.0.0](https://github.com/Pearson-Higher-Ed/contextual-help/compare/v1.3.1...v2.0.0) (2016-11-19)
 
