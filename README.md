@@ -170,7 +170,7 @@ The clickable elements which reveal/hide the content must be buttons, however th
 <h3>
   <button class="o-disclosure" aria-controls="...an id here..." aria-expanded="false">
     <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" class="pe-icon--pivot-close-18">
-      <use xlink:href="/icons/p-icons-sprite-1.1.svg#pivot-close-18"></use>
+      <use xlink:href="#pivot-close-18"></use>
     </svg>
     Heading Text Here
   </button>

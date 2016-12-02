@@ -1,5 +1,6 @@
-@import 'node_modules/@pearson-components/drawer/main';
-@import 'node_modules/pearson-elements/scss/elements';
+@import 'node_modules/pearson-elements/scss/base/variables';
+@import 'node_modules/pearson-elements/scss/elements/color/variables';
+@import 'node_modules/pearson-elements/scss/elements/typography/variables';
 
 /* drawer element */
 .o-contextual-help__drawer.o-drawer {
