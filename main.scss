@@ -65,15 +65,9 @@
     height: 14px;
   }
 
-  .close-help,
-  .back-to-help {
-    padding: 0;
-    background-color: transparent;
-    border: 0;
-
-    svg {
-      margin-top: 2px;
-    }
+  .close-help svg,
+  .back-to-help svg {
+    margin-top: 2px;
   }
 
   .close-help {
