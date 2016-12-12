@@ -1,3 +1,18 @@
+<a name="2.1.2"></a>
+## [2.1.2](https://github.com/Pearson-Higher-Ed/contextual-help/compare/v2.1.1...v2.1.2) (2016-12-12)
+
+
+### Bug Fixes
+
+* see if this stops repeated css ([cf14043](https://github.com/Pearson-Higher-Ed/contextual-help/commit/cf14043))
+
+
+### Features
+
+* check for sprite; use new pe-icon--btn class ([1d13d25](https://github.com/Pearson-Higher-Ed/contextual-help/commit/1d13d25))
+
+
+
 <a name="2.1.1"></a>
 ## [2.1.1](https://github.com/Pearson-Higher-Ed/contextual-help/compare/v2.1.0...v2.1.1) (2016-11-29)
 
