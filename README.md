@@ -169,7 +169,7 @@ The clickable elements which reveal/hide the content must be buttons, however th
 ```
 <h3>
   <button class="o-disclosure" aria-controls="...an id here..." aria-expanded="false">
-    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" class="pe-icon--pivot-close-18">
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" class="pe-icon--pivot-close-18">
       <use xlink:href="#pivot-close-18"></use>
     </svg>
     Heading Text Here
@@ -184,7 +184,6 @@ The clickable elements which reveal/hide the content must be buttons, however th
 The id of the div must be unique on the page and match the `aria-controls` attribute of its button and must have a class of either "o-panel--closed" (if it is default hidden) or "o-panel--opened" if it is by default open (if this is the case, the associated button above must have its `aria-expanded` attribute set to "true").
 
 When the button is clicked and the matching div becomes visible, focus remains on the button, the button's `aria-expanded` attribute turns to "true" and the class name of the hidden content becomes `o-panel--opened`.
-
 
 ## Contributions
 
