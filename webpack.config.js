@@ -3,7 +3,7 @@ module.exports = {
   entry: {
    dev_demo: ['webpack/hot/dev-server', './demo/src/demo.js'],
    dev_bundle: ['webpack/hot/dev-server', './main.js'],
-   dist: ['./main.js']
+   dist: ['./main.js', './demo/src/demo.js']
   },
   output: {
     path: './',
