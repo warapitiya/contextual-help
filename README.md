@@ -18,6 +18,7 @@ The advantage of the script is it allows caching of the (currently) 84kb-sized s
 Platform requirements: npm 2+ and the [Elements SDK](https://www.npmjs.com/package/pearson-elements)
 
 	> npm i --save @pearson-components/contextual-help
+        > npm run copy-utils
 
 ### Integration with @pearson-components/app-header
 
