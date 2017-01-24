@@ -4,6 +4,7 @@ node_modules/
 .idea
 build/*.js
 build/reports
+npm_scripts/*.js
 fonts
 icons
-contextual-help.iml
+*.iml
