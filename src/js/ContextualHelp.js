@@ -246,8 +246,7 @@ ContextualHelp.prototype.manageLayers = function(has_topic) {
 
 ContextualHelp.prototype.accordion = function() {
   var accordion = this._el.querySelector('.o-contextual-help__accordion'),
-      buttons = accordion.querySelectorAll('.o-disclosure'),
-      panels = accordion.querySelectorAll("[class^='o-panel--']");
+      buttons = accordion.querySelectorAll('.o-disclosure');
 
   for (var i=0,l=buttons.length; i<l; i++) {
     var button = buttons[i];
