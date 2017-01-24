@@ -1,3 +1,19 @@
+<a name="2.1.3"></a>
+## [2.1.3](https://github.com/Pearson-Higher-Ed/contextual-help/compare/v2.1.2...v2.1.3) (2017-01-24)
+
+
+### Bug Fixes
+
+* IE's tabbable icons ([9c20b72](https://github.com/Pearson-Higher-Ed/contextual-help/commit/9c20b72))
+* update travis.yml ([c0fba64](https://github.com/Pearson-Higher-Ed/contextual-help/commit/c0fba64))
+
+
+### Features
+
+* update package.json and gitignore, incorporate some of the new npm_scripts ([78c49af](https://github.com/Pearson-Higher-Ed/contextual-help/commit/78c49af))
+
+
+
 <a name="2.1.2"></a>
 ## [2.1.2](https://github.com/Pearson-Higher-Ed/contextual-help/compare/v2.1.1...v2.1.2) (2016-12-12)
 
