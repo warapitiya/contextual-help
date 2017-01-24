@@ -3,16 +3,15 @@
   "version": "2.1.2",
   "description": "Contextual help for web applications.",
   "scripts": {
-    "dev-setup": "mkdir -p fonts && mkdir -p icons && cp ./node_modules/pearson-elements/dist/fonts/* ./fonts && cp ./node_modules/pearson-elements/dist/icons/* ./icons",
-    "dev": "node ./npm_scripts/dev.js",
-    "start": "npm run dev",
     "test": "./node_modules/karma/bin/karma start karma.conf.js",
-    "build": "node ./npm_scripts/build.js",
-    "version": "node ./npm_scripts/version.js",
-    "ci": "node ./npm_scripts/ci.js",
-    "release": "node ./npm_scripts/release.js",
-    "verify": "node ./npm_scripts/verify.js",
-    "copy-utils": "node ./node_modules/@pearson-components/npm-scripts/npm_scripts/cross-platform.js"
+    "build": "webpack -p",
+    "dev-setup": "mkdir -p fonts && mkdir -p icons && cp ./node_modules/pearson-elements/dist/fonts/* ./fonts && cp ./node_modules/pearson-elements/dist/icons/* ./icons",
+    "dev": "npm run dev-setup && webpack-dev-server --devtool source-map --hot --host 0.0.0.0 --progress --colors",
+    "start": "npm run dev",
+    "version": "npm run gen-changelog && git add CHANGELOG.md",
+    "ci": "npm run build",
+    "gen-changelog": "node ./npm_scripts/gen-changelog.js",
+    "release": "node ./npm_scripts/release.js"
   },
   "repository": {
     "type": "git",
@@ -23,7 +22,6 @@
     "contextual-help"
   ],
   "devDependencies": {
-    "@pearson-components/npm-scripts": "^0.3.11",
     "conventional-changelog": "^1.1.0",
     "coveralls": "^2.11.4",
     "css-loader": "^0.23.1",
