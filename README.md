@@ -167,9 +167,10 @@ The path of the icon might be different for you locally. If the icon doesn't app
 The clickable elements which reveal/hide the content must be buttons, however these buttons likely make sense to be inside headings if the clickable text is heading text. Example:
 
 ```
+<div class="o-contextual-help__accordion">
 <h3>
   <button class="o-disclosure" aria-controls="...an id here..." aria-expanded="false">
-    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" class="pe-icon--pivot-close-18">
+    <svg aria-hidden="true" focusable="false" class="pe-icon--pivot-close-18">
       <use xlink:href="#pivot-close-18"></use>
     </svg>
     Heading Text Here
@@ -179,6 +180,10 @@ The clickable elements which reveal/hide the content must be buttons, however th
 ...
 
 <div id="...an id here..." class="o-panel--closed">Hidden content here...</div>
+
+...
+
+</div>
 ```
 
 The id of the div must be unique on the page and match the `aria-controls` attribute of its button and must have a class of either "o-panel--closed" (if it is default hidden) or "o-panel--opened" if it is by default open (if this is the case, the associated button above must have its `aria-expanded` attribute set to "true").
