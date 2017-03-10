@@ -1,9 +1,10 @@
-<a name="2.1.3"></a>
-## [2.1.3](https://github.com/Pearson-Higher-Ed/contextual-help/compare/v2.1.2...v2.1.3) (2017-01-24)
+<a name="2.1.4"></a>
+## [2.1.4](https://github.com/Pearson-Higher-Ed/contextual-help/compare/v2.1.2...v2.1.4) (2017-03-10)
 
 
 ### Bug Fixes
 
+* appropriate padding for new app-header ([e91ca68](https://github.com/Pearson-Higher-Ed/contextual-help/commit/e91ca68))
 * IE's tabbable icons ([9c20b72](https://github.com/Pearson-Higher-Ed/contextual-help/commit/9c20b72))
 * update travis.yml ([c0fba64](https://github.com/Pearson-Higher-Ed/contextual-help/commit/c0fba64))
 
