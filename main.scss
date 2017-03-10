@@ -26,7 +26,14 @@
 /* make room for app-header if exists */
 .exists-o-header .o-contextual-help__topics,
 .exists-o-header .o-contextual-help__topic-content {
-  padding-top: 48px;
+  padding-top: 70px;
+}
+
+@media (max-width: 768px) {
+  .exists-o-header .o-contextual-help__topics,
+  .exists-o-header .o-contextual-help__topic-content {
+    padding-top: 60px;
+  }
 }
 
 /* default first layer in visible position */
