@@ -2,7 +2,7 @@
 
 ## Notice
 
-This current version of Contextual-Help is using the new ElementsSDK version, which is a breaking change due to Pearson rebranding. [Latest con-help rebranding styles](http://pearson-higher-ed.github.io/design/c/drawer/beta/)
+This current version of Contextual-Help is using the new ElementsSDK version, which is a breaking change due to Pearson rebranding. [Latest con-help rebranding styles](http://pearson-higher-ed.github.io/design/c/drawer/beta/) and [running demo](http://pearson-higher-ed.github.io/contextual-help/).
 
 ### Icons
 
@@ -55,6 +55,7 @@ ContextualHelp.init();
 ```
 
 ## Example Configuration
+
 Start by adding a list of help topics to display, via configuration script element.
 
 ```html
@@ -80,6 +81,7 @@ document.getElementById('o-contextual-help-drawer').oContextualHelp;
 ```
 
 ## Initialization
+
 This module will initialize when o.InitContextualHelp fires.  It can be manually initialized with the static `init()` method.
 
 ## API
