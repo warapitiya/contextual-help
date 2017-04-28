@@ -1,6 +1,7 @@
 {
   "name": "@pearson-components/contextual-help",
   "version": "2.1.4",
+  "author": "Pearson Design Accelerator pearson-design-accelerator@pearson.com",
   "description": "Contextual help for web applications.",
   "main": "main.js",
   "scripts": {
