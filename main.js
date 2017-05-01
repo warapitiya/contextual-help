@@ -1,11 +1,11 @@
 /*global require, module*/
 'use strict';
 
-// bundled styling
-require('./main.scss');
-
 var ContextualHelp = require('./src/js/ContextualHelp'),
     Drawer = require('@pearson-components/drawer/main');
+
+// bundled styling
+require('./main.scss');
 
 
 var startContextualHelp = function () {
