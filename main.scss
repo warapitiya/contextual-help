@@ -10,7 +10,7 @@
   border-left: 1px solid #d9d9d9;
   box-sizing: border-box !important;
   background-color: #fff !important;
-  box-shadow: 0 3px 5px 0 rgba(199,199,199,0.70);
+  box-shadow: 0 3px 5px 0 rgba(199,199,199,0.7);
 }
 
  .o-drawer .pe-trap {
@@ -64,6 +64,7 @@ body {
   overflow-y: auto;
   box-sizing: border-box;
   transition: left 0.4s ease;
+  border-top: 1px solid #d9d9d9;
 }
 
 /* make room for app-header if exists */
@@ -100,79 +101,92 @@ body {
   padding-bottom: 25px;
   margin-bottom: 25px;
   border-bottom: 1px solid $pe-color-alto;
-  overflow: hidden;
+  
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
 
   /* help topics */
   .topic_heading {
     margin: 0;
   }
 
-  .close-help svg,
-  .back-to-help svg {
-  }
-
   .close-help {
     float: right;
-    margin-right: 1px;
-    margin-top: 1px;
   }
 
   .back-to-help {
-    display: block;
-    width: 90%;
+    margin-top: 5px;
+    padding: 2px 2px 2px 0;
 
     svg {
       float: left;
     }
     span {
-      display: block;
+      margin-left: 5px;
+      line-height: 18px;
     }
-  }
-}
-
-/* first heading of each layer */
-.o-contextual-help__excerpt-list>div:first-child h3,
-#o-contextual-help-topic-content-target h2:first-child {
-  margin-top: 0;
-}
-.o-contextual-help__excerpt p {
-  min-height: 4.7em;/* there are 3 lines of content at most */
-
-  &:after {
-    content: '\02026';/* hellip */
   }
 }
 
 .o-contextual-help__excerpt {
-  margin-bottom: 25px; 
+  margin-top: 25px; 
+  cursor: pointer;
 }
-/* todo: remove from last child
- set text and header colour */
-.o-contextual-help__topic {
-  border-bottom: 1px solid $pe-color-alto;
+.o-contextual-help__excerpt-list div:first-child .o-contextual-help__excerpt {
+  margin: 0;
+}
 
-  h1, h2, h3, h4 {
+.o-contextual-help__excerpt p:after {
+  content: '\02026';/* hellip */
+}
+.o-contextual-help__excerpt-list div:last-child
+ .o-contextual-help__excerpt p:last-child,
+.o-contextual-help__topic p:last-child {
+  margin-bottom: 0;
+}
+
+.o-contextual-help__topic {
+  h2 {
+    margin-bottom: 25px;
+  }
+  h3, h4 {
+    margin: 0;
     font-size: 1rem;
     font-weight: 600;
     line-height: 1.28571rem;
-
-    a {
-      font-weight: normal;
-    }
+  }
+  p {
+    margin-bottom: 25px;
+    color: #6a7070;
+    font-size: 1rem;
+    line-height: 1.28571rem;
   }
   ul, ol {
     padding-left: 2.5em;
   }
   li {
+    color: #6a7070;
     margin-bottom: .6em;
   }
 
   /* accordion */
   .o-disclosure {
-    padding: 0;
+    margin-top: 25px;
+    padding: 2px;
+    color: $pe-color-charcoal;
     background-color: transparent;
     border: 0;
+
+    svg {
+      margin-right: 3px;
+    }
   }
+  .o-contextual-help__accordion h3:first-child button {
+    margin-top: 0;
+  } 
   .o-panel--closed {
     display: none;
   }
