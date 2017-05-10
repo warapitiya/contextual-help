@@ -121,13 +121,15 @@ function ContextualHelp(el) {
         }
         var nExcerpt = document.createElement('div');
         nExcerpt.innerHTML = topicExcerptTemplate;
-        var title = nExcerpt.querySelector('h3 a');
+        var title = nExcerpt.querySelector('h3 a'),
+            desc = nExcerpt.querySelector('p');
         title.innerHTML = cData.title;
-        title.onclick = function() {
+        desc.innerHTML = cData.excerpt;
+        nExcerpt.onclick = function() {
           me._inner_trigger = title;
           me.openHelpTopic(item);
-        };
-        nExcerpt.querySelector('p').innerHTML = cData.excerpt;
+        }
+
         me._el.querySelector('.o-contextual-help__excerpt-list').appendChild(nExcerpt);
         if (list.length > 0) {
           me.populateFromList(list, cb);
@@ -167,7 +169,7 @@ function ContextualHelp(el) {
     eventEl.addEventListener('oAppHeader.help.toggle', function() {
       if (me.toggle) { me.toggle(); }
     });
-    // if header, add a class
+    // if header, add a class to push drawer under header
     el.classList.add('exists-o-header');
   }
 
