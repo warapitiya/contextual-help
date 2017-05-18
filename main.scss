@@ -2,6 +2,12 @@
 @import 'node_modules/pearson-elements/scss/elements/color/variables';
 @import 'node_modules/pearson-elements/scss/elements/typography/variables';
 
+/*focus styles*/
+.mouseDetected .o-drawer a,
+.mouseDetected .o-drawer button {
+  outline: 0;
+}
+
 /* drawer element */
 /* temp */
 .o-drawer {
@@ -63,7 +69,7 @@ body {
   overflow-x: hidden;
   overflow-y: auto;
   box-sizing: border-box;
-  transition: left 0.4s ease;
+  transition: left 0.5s ease-in-out;
   border-top: 1px solid #d9d9d9;
 }
 
@@ -89,11 +95,22 @@ body {
 
 /* topic content (second layer) in visible position */
 .o-contextual-help__content--visible {
+
   .o-contextual-help__topics {
     left: -100%;
+
+    .topic_heading {
+      margin-left: -30px;
+    }
   }
   .o-contextual-help__topic-content {
     left: 0px;
+
+    .o-contextual-help__header .back-to-help {
+      margin-left: 0;
+      margin-right: -90%; /* text is longer than design thinks it is */
+      opacity: 1;
+    }
   }
 }
 
@@ -111,6 +128,7 @@ body {
   /* help topics */
   .topic_heading {
     margin: 0;
+    transition: margin-left .4s ease-in-out .3s;
   }
 
   .close-help {
@@ -118,8 +136,10 @@ body {
   }
 
   .back-to-help {
-    margin-top: 5px;
+    margin-left: 40%;
     padding: 2px 2px 2px 0;
+    opacity: 0;
+    transition: margin-left .3s ease-in-out .2s, opacity .3s .2s;
 
     svg {
       float: left;
@@ -134,6 +154,11 @@ body {
 .o-contextual-help__excerpt {
   margin-top: 25px; 
   cursor: pointer;
+
+  h3 a {
+    color: $pe-color-charcoal;
+    text-decoration: none;
+  }
 }
 .o-contextual-help__excerpt-list div:first-child .o-contextual-help__excerpt {
   margin: 0;

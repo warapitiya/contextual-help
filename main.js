@@ -7,8 +7,15 @@ var ContextualHelp = require('./src/js/ContextualHelp'),
 // bundled styling
 require('./main.scss');
 
+// showing focus
+document.addEventListener('mousedown',function() {
+document.body.classList.add('mouseDetected');
+},false);
+document.addEventListener('keydown',function() {
+document.body.classList.remove('mouseDetected');
+},false);
 
-var startContextualHelp = function () {
+var startContextualHelp = function() {
 
   // initialize all drawer elements on the page
   //document.dispatchEvent(new CustomEvent('o.InitAllDrawerElements'));
