@@ -171,7 +171,7 @@ The clickable elements which reveal/hide the content must be buttons, however th
 ```
 <div class="o-contextual-help__accordion">
 <h3>
-  <button class="o-disclosure" aria-controls="...an id here..." aria-expanded="false">
+  <button class="o-disclosure pe-label pe-label--bold" aria-controls="...an id here..." aria-expanded="false">
     <svg aria-hidden="true" focusable="false" class="pe-icon--pivot-close-18">
       <use xlink:href="#pivot-close-18"></use>
     </svg>
