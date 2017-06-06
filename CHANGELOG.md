@@ -1,10 +1,35 @@
+<a name="2.2.0"></a>
+# [2.2.0](https://github.com/Pearson-Higher-Ed/contextual-help/compare/v2.1.4...v2.2.0) (2017-06-06)
+
+
+### Bug Fixes
+
+* moved the require after Drawer is called; this allows con-help CSS to come AFTER Drawer's ([6770593](https://github.com/Pearson-Higher-Ed/contextual-help/commit/6770593))
+
+
+### Features
+
+* animationz ([f37677b](https://github.com/Pearson-Higher-Ed/contextual-help/commit/f37677b))
+* make whole excerpt clickable ([ed041c7](https://github.com/Pearson-Higher-Ed/contextual-help/commit/ed041c7))
+
+
+
 <a name="2.1.4"></a>
-## [2.1.4](https://github.com/Pearson-Higher-Ed/contextual-help/compare/v2.1.2...v2.1.4) (2017-03-10)
+## [2.1.4](https://github.com/Pearson-Higher-Ed/contextual-help/compare/v2.1.3...v2.1.4) (2017-03-10)
 
 
 ### Bug Fixes
 
 * appropriate padding for new app-header ([e91ca68](https://github.com/Pearson-Higher-Ed/contextual-help/commit/e91ca68))
+
+
+
+<a name="2.1.3"></a>
+## [2.1.3](https://github.com/Pearson-Higher-Ed/contextual-help/compare/v2.1.2...v2.1.3) (2017-01-24)
+
+
+### Bug Fixes
+
 * IE's tabbable icons ([9c20b72](https://github.com/Pearson-Higher-Ed/contextual-help/commit/9c20b72))
 * update travis.yml ([c0fba64](https://github.com/Pearson-Higher-Ed/contextual-help/commit/c0fba64))
 
