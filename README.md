@@ -2,14 +2,14 @@
 
 ## Notice
 
-This current version of Contextual-Help is using the new ElementsSDK version, which is a breaking change due to Pearson rebranding. [Latest con-help rebranding styles](http://pearson-higher-ed.github.io/design/c/drawer/beta/) and [running demo](http://pearson-higher-ed.github.io/contextual-help/).
+This current version of Contextual-Help (v2+) is using the new ElementsSDK (v1+) version, which is a breaking change due to Pearson rebranding. [Latest drawer rebranding styles](http://pearson-higher-ed.github.io/design/c/drawer/) and [latest con-help rebranding styles](http://pearson-higher-ed.github.io/design/c/contextual-help/) and [running demo](http://pearson-higher-ed.github.io/contextual-help/).
 
 ### Icons
 
 The new ElementsSDK uses an svg sprite for icons. Normally the sprite can remain in your code directory the way images and fonts do, except that IE 11 and some Android webkit-based browsers won't show the icons that way. Instead, including the actual sprite on the page will allow these browsers to work. You have the choice of either:
 
 * manually adding the sprite (found in `/icons/`) in your HTML (ideally as the first child of the &lt;body&gt; element)
-* use the example script found in the demo's `index.html`
+* use the example JavaScript found in the demo's `index.html`
 
 The advantage of the script is it allows caching of the (currently) 84kb-sized sprite.
 
@@ -21,9 +21,9 @@ Platform requirements: npm 2+ and the [Elements SDK](https://www.npmjs.com/packa
 
 ### Integration with @pearson-components/app-header
 
-Most commonly, contextual-help is used with the app-header component, which emits the `oAppHeader.help.toggle` event when the Help link is clicked. Contextual-help, when initialized, will automatically check for app-header in the DOM, and then add the app-header event listener.
+Most commonly, contextual-help is used with the app-header component, which emits the `oAppHeader.help.toggle` event when the Help link is clicked. Contextual-help, when initialized, will automatically check for app-header in the DOM, and it will then add the app-header event listener.
 
-To successfully integrate with app-header, **initialize the app-header first**, and then initialize contextual-help next as described below.
+To successfully integrate with app-header, **initialize the app-header first**, and then initialize contextual-help next as described below. The order of the app-header and contextual-help drawer in the HTML doesn't matter; **it's the initialization order that matters**.
 
 ### Script Include (Preferred)
 
@@ -171,7 +171,7 @@ The clickable elements which reveal/hide the content must be buttons, however th
 ```
 <div class="o-contextual-help__accordion">
 <h3>
-  <button class="o-disclosure" aria-controls="...an id here..." aria-expanded="false">
+  <button class="o-disclosure pe-label pe-label--bold" aria-controls="...an id here..." aria-expanded="false">
     <svg aria-hidden="true" focusable="false" class="pe-icon--pivot-close-18">
       <use xlink:href="#pivot-close-18"></use>
     </svg>

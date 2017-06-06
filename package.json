@@ -1,6 +1,7 @@
 {
   "name": "@pearson-components/contextual-help",
   "version": "2.1.4",
+  "author": "Pearson Design Accelerator pearson-design-accelerator@pearson.com",
   "description": "Contextual help for web applications.",
   "main": "main.js",
   "scripts": {
@@ -32,11 +33,11 @@
     "karma": "^0.13.3",
     "karma-coverage": "^0.2.6",
     "karma-mocha": "^0.1.10",
-    "karma-phantomjs-launcher": "^1.0.0",
+    "karma-phantomjs-launcher": "^1.0.4",
     "karma-webpack": "^1.7.0",
     "mocha": "^2.1.0",
     "node-sass": "^3.4.2",
-    "pearson-elements": "^1.5.0",
+    "pearson-elements": "^1.10.2",
     "phantomjs-prebuilt": "^2.1.7",
     "sass-loader": "^3.2.0",
     "style-loader": "^0.13.0",
@@ -44,7 +45,7 @@
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
-    "@pearson-components/drawer": "~0.3.3",
+    "@pearson-components/drawer": "~1.0.0",
     "dom-delegate": "~2.0.3"
   }
 }

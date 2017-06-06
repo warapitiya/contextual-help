@@ -1,14 +1,21 @@
 /*global require, module*/
 'use strict';
 
-// bundled styling
-require('./main.scss');
-
 var ContextualHelp = require('./src/js/ContextualHelp'),
     Drawer = require('@pearson-components/drawer/main');
 
+// bundled styling
+require('./main.scss');
 
-var startContextualHelp = function () {
+// showing focus
+document.addEventListener('mousedown',function() {
+document.body.classList.add('mouseDetected');
+},false);
+document.addEventListener('keydown',function() {
+document.body.classList.remove('mouseDetected');
+},false);
+
+var startContextualHelp = function() {
 
   // initialize all drawer elements on the page
   //document.dispatchEvent(new CustomEvent('o.InitAllDrawerElements'));
