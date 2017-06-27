@@ -47,7 +47,11 @@ module.exports = function(config) {
 					{
 						test: /\.scss$/,
 						loader: 'style!css!sass'
-					}
+					},
+                    {
+                        test: /\.html/,
+                        loader: 'html'
+                    },
 				]
 			}
 		},
