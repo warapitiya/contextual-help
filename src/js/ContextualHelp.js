@@ -3,9 +3,9 @@
 var XHR = require('./xhr/main');
 
 // setup templates
-var helpTemplate = require('html!../html/helpT.html');
-var topicExcerptTemplate = require('html!../html/excerptT.html');
-var topicTemplate = require('html!../html/contentT.html');
+var helpTemplate = require('../html/helpT.html');
+var topicExcerptTemplate = require('../html/excerptT.html');
+var topicTemplate = require('../html/contentT.html');
 
 
 function ContextualHelp(el) {
