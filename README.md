@@ -40,7 +40,7 @@ Initialize contextual-help in your JavaScript (after app-header initialization):
 ```js
 document.dispatchEvent(new CustomEvent('o.InitContextualHelp'));
 ```
-  
+
 The config property options are outlined further down in this README.
 
 ### CommonJS
@@ -102,7 +102,7 @@ Toggles the current state of the drawer.
 
 `setLanguage(langCode)`
 
-Sets the internal member variable for use in fetching content.  Default is 'en-us'.
+Sets the internal member variable for use in fetching content.  Default is 'en-us'. Other acceptable parameters are 'es' and 'fr'.
 
 `openHelpTopic(topicId)`
 
@@ -149,13 +149,13 @@ Source maps are enabled for the webpack dev server. Using **Chrome dev tools** -
 
 Refer to the [drawer](https://github.com/Pearson-Higher-Ed/drawer) documentation for accessibility on the drawer element. The drawer takes care of managing focus as the drawer is opened and closed, assuming all the links or buttons which trigger the drawer have a `data-open`, `data-close`, or `data-toggle` attribute and that is set to the string "drawer".
 
-In contextual-help, there are at least 2 layers inside: one listing the help topics, and one with dedicated topic information. Only focusable elements within the visible layer should be reachable with keyboard focus and by assistive tech (AT) such as screen readers. When another layer slides into view, the now-invisible layer should no longer be available to keyboard or AT, and keyboard focus will move to the new layer. 
+In contextual-help, there are at least 2 layers inside: one listing the help topics, and one with dedicated topic information. Only focusable elements within the visible layer should be reachable with keyboard focus and by assistive tech (AT) such as screen readers. When another layer slides into view, the now-invisible layer should no longer be available to keyboard or AT, and keyboard focus will move to the new layer.
 
 When the default contextual-help (topics list) is opened, focus will be on the "Close Help" button. When a specific topic is opened, focus will be on the "Back to Help Topics" button. Focus will cycle through only the visible layer. If the specific-topic layer was triggered by clicking on a help topic from within contextual help, then clicking "Back to Help Topics" will bring keyboard focus back to that topic. Otherwise, focus moves to the "Close Help" button.
 
 ### Heading order
 
-In the main topics list section, the phrase "Help Topics" is an h2 element. The name of each topic in the topics list is an h3 element. 
+In the main topics list section, the phrase "Help Topics" is an h2 element. The name of each topic in the topics list is an h3 element.
 
 In the specific-topic section, the name of the topic is an h2 element. Any headings inside the topic should be an h3 or smaller, starting with h3 for the main subtopics. They should not jump to h4, h5, or h6, but follow good content heading structure.
 
