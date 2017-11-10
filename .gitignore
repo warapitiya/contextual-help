@@ -8,3 +8,4 @@ npm_scripts/*.js
 fonts
 icons
 *.iml
+.scannerwork/
