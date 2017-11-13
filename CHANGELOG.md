@@ -1,3 +1,13 @@
+<a name="2.2.4"></a>
+## [2.2.4](https://github.com/Pearson-Higher-Ed/contextual-help/compare/v2.2.3...v2.2.4) (2017-11-13)
+
+
+### Features
+
+* Integrate Sonar ([23cd4af](https://github.com/Pearson-Higher-Ed/contextual-help/commit/23cd4af))
+
+
+
 <a name="2.2.3"></a>
 ## [2.2.3](https://github.com/Pearson-Higher-Ed/contextual-help/compare/v2.2.2...v2.2.3) (2017-10-25)
 
