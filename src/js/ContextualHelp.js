@@ -11,7 +11,7 @@ var topicTemplate = require('../html/contentT.html');
 function ContextualHelp(el) {
 
   var me = this,
-      baseURL = 'http://subversion.pearsoncmg.com/data/ctgwiki/product_docs/o-help-content/';
+      baseURL = 'http://context-help.pearson.com/help/de6fde00-d9d7-4e45-b506-82c01fd7202a/Source/';
 
   function getConfig() {
     var conf = {},
