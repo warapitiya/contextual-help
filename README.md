@@ -192,6 +192,9 @@ The id of the div must be unique on the page and match the `aria-controls` attri
 
 When the button is clicked and the matching div becomes visible, focus remains on the button, the button's `aria-expanded` attribute turns to "true" and the class name of the hidden content becomes `o-panel--opened`.
 
+## Demo
+If no content is showing up when running the demo locally, you will most likely need to enable CORS in your browser.
+
 ## Contributions
 
 Please review the [guidelines](https://github.com/Pearson-Higher-Ed/docs/blob/master/origami-contributions.md) for contributing before getting started.
