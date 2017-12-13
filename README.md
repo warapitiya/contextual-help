@@ -35,6 +35,12 @@ Add the following script include to your web page:
 <script src="path/to/dist.contextual-help.js"></script>
 ```
 
+Additionally if an application is not using NPM to consume the contextual-help component, the code can be included via a CDN.
+
+```html
+<script src="https://unpkg.com/@pearson-components/contextual-help@2.2.4/build/dist.contextual-help.js"></script>
+```
+
 Initialize contextual-help in your JavaScript (after app-header initialization):
 
 ```js
