@@ -2,7 +2,6 @@
 .sass-cache/
 node_modules/
 .idea
-build/*.js
 build/reports
 npm_scripts/*.js
 fonts
